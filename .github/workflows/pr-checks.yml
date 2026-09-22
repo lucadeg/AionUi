@@ -1,3 +1,4 @@
+
 name: 'PR Checks'
 
 on:
@@ -12,15 +13,7 @@ on:
         type: boolean
         required: false
         default: false
-  pull_request:
-    types: [opened, synchronize, edited, closed, ready_for_review]
-    branches: [main, dev]
-    paths-ignore:
-      - '**/*.md'
-      - 'docs/**'
-      - '.vscode/**'
-      - '.github/ISSUE_TEMPLATE/**'
-
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 concurrency:
   group: pr-checks-${{ github.event.pull_request.number || inputs.pr_number }}
   cancel-in-progress: true

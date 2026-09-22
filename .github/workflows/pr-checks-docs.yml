@@ -1,15 +1,9 @@
+
 name: 'PR Checks (docs only)'
 
 on:
-  pull_request:
-    types: [opened, synchronize, edited, ready_for_review]
-    branches: [main, dev]
-    paths:
-      - '**/*.md'
-      - 'docs/**'
-      - '.vscode/**'
-      - '.github/ISSUE_TEMPLATE/**'
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 permissions:
   contents: read
 

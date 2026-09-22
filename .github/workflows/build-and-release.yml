@@ -1,3 +1,4 @@
+
 name: Build and Release
 
 permissions:
@@ -7,11 +8,8 @@ permissions:
   actions: write
 
 on:
-  push:
-    branches: [dev]
-    tags:
-      - '*'
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 env:
   BUN_INSTALL_REGISTRY: 'https://registry.npmjs.org/'
 
